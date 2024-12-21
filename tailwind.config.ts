@@ -1,20 +1,26 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./containers/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        "primary-color": "#008AAA",
-        "secondary-color": "#3BBADB",
-        "orange-dark": "#D1884F",
-      },
-    },
+  	extend: {
+  		colors: {
+  			'primary-color': '#008AAA',
+  			'secondary-color': '#3BBADB',
+  			'orange-dark': '#D1884F'
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
   plugins: [
     function ({
@@ -25,5 +31,6 @@ export default {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
     },
-  ],
+      require("tailwindcss-animate")
+],
 } satisfies Config;
