@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-    darkMode: ["class"],
+    darkMode: "class",
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,7 +13,8 @@ export default {
   		colors: {
   			'primary-color': '#008AAA',
   			'secondary-color': '#3BBADB',
-  			'orange-dark': '#D1884F'
+  			'orange-dark': '#D1884F',
+        "gray-normal" : "#E4E6EB"
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
