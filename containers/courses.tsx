@@ -24,7 +24,7 @@ const courses = [
         title: "Front-End",
         name : "Youtube",
         description: "Viewing Front-End Courses on Youtube",
-        image: "/youtube-on-android-gets-incognito-mode_tmxg.jpg",
+        image: "/youtube.jpg",
         link: "https://www.youtube.com/",
         date : "evermore"
     },
@@ -32,9 +32,9 @@ const courses = [
 ];
 const CoursesSection = () => {
     return (
-        <section className="my-20 px-8">
-            <h2 className="text-center text-3xl font-bold mb-8 dark:text-white">My Courses</h2>
-            <p className="font-semibold text-center text-sm text-gray-500 dark:text-white mb-10">
+        <section id="courses" className="my-20 px-8">
+            <h2 className="text-center text-5xl font-bold mb-6 text-gray-900 dark:text-white">My Courses</h2>
+            <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12">
                 Over the years, I've taken numerous courses that have shaped my skills
                 as a developer. Below are some of the most impactful ones.
             </p>

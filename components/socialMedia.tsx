@@ -13,7 +13,7 @@ const SocialMedia = () => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
-                <a href=""><FaTelegramPlane /></a>
+                <a href="https://t.me/bagheri_dev01"><FaTelegramPlane /></a>
             </motion.div>
             <motion.div
                 className="flex items-center justify-center size-6 bg-secondary-color rounded-full p-1 cursor-pointer"

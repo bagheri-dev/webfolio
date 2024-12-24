@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
     return (
-        <section className="bg-white dark:bg-gray-900">
+        <section id="home" className="bg-white dark:bg-gray-900">
             <div className="flex items-center justify-between px-14 py-10">
                 <div>
                     <h1 className="text-5xl font-bold mb-5 text-black dark:text-white">

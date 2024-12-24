@@ -33,9 +33,9 @@ const CourseCard = ({ id, name, title, description, date, link, image }: ICourse
                 <div className="flex-shrink-0">
                     <Image src={image} alt={name} width={120} height={120} className="rounded-full" />
                 </div>
-                <div className="flex flex-col">
+                <div className="">
                     <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-white">{title}</h3>
-                    <p className="bg-primary-color text-white text-xs p-2 rounded-md text-center">{date}</p>
+                    <span className="flex-shrink-0 bg-primary-color text-white text-xs p-2 rounded-md text-center">{date}</span>
                 </div>
             </div>
             <div className="text-gray-700 dark:text-gray-300">

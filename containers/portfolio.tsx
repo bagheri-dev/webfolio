@@ -29,21 +29,12 @@ const projects = [
         demoLink: "https://myportfolio.com",
         codeLink: "https://github.com/bagheri-dev/Nexcent",
         techStack: ["Tailwind CSS" , "React.js" , "vite"],
-    },
-    {
-        id: 4,
-        title: "Nexcent",
-        description: "This is a simple UI project built to learn and practice Flexbox. The project focuses on creating responsive layouts using Flexbox, making it easier to understand and apply the core concepts of Flexbox in real-world web development scenarios.",
-        image: "/flex-learning-desktop.png",
-        demoLink: "https://myportfolio.com",
-        codeLink: "https://github.com/bagheri-dev/Project-flex-learning",
-        techStack: ["flex box" , "javascript"],
-    },
+    }, 
 ];
 
 const Portfolio = () => {
     return (
-        <section className="my-20 px-6 lg:px-16">
+        <section id="projects" className="my-20 px-6 lg:px-16">
             <h2 className="text-center text-5xl font-bold mb-6 text-gray-900 dark:text-white">
                 My Portfolio
             </h2>

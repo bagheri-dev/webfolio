@@ -41,9 +41,9 @@ const services = [
 
 const ServicesSection = () => {
     return (
-        <section className="mt-[137.91px]">
-            <h2 className="text-center text-3xl font-bold mb-6 dark:text-white">My Services</h2>
-            <p className="font-semibold text-center text-sm text-gray-500 dark:text-white">At Mahdi Bagheri, we offer a comprehensive range of front-end development services designed to bring your digital ideas to life. Whether you need a responsive, user-friendly website, a fast-loading single-page application, or a high-converting landing page, we’ve got you covered. With a keen focus on performance, scalability, and modern design trends, we create web solutions that not only look stunning but also work seamlessly across all devices.By working with us, you’re not just getting a website; you’re investing in a digital experience tailored to your brand's unique vision and goals. Let’s collaborate to build something exceptional!</p>
+        <section id="services" className="mt-[137.91px]">
+            <h2 className="text-center text-5xl font-bold mb-6 text-gray-900 dark:text-white">My Services</h2>
+            <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12">At Mahdi Bagheri, we offer a comprehensive range of front-end development services designed to bring your digital ideas to life. Whether you need a responsive, user-friendly website, a fast-loading single-page application, or a high-converting landing page, we’ve got you covered. With a keen focus on performance, scalability, and modern design trends, we create web solutions that not only look stunning but also work seamlessly across all devices.By working with us, you’re not just getting a website; you’re investing in a digital experience tailored to your brand's unique vision and goals. Let’s collaborate to build something exceptional!</p>
             <div className="grid grid-cols-3 gap-3 justify-center items-center mt-12">
                 {services.map((item) => {
                     return <Service key={item.id} title={item.title} desc={item.desc} image={item.image}/>
