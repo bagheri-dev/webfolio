@@ -15,8 +15,10 @@ const HireMe = () => {
             }}
             transition={{ duration: 0.3 }}
         >
-            HIRE ME
-            <GoChevronRight />
+            <a className="flex items-center gap-x-2" href="tel:09153405360">
+                HIRE ME
+                <GoChevronRight />
+            </a>
         </motion.button>
     );
 }

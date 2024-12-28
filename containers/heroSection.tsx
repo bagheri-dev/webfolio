@@ -18,7 +18,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div>
-                    <Image src={"/favicon.ico"} alt="image" width={325.72} height={459.09} />
+                    <Image src={"/programming.png"} alt="image" width={450} height={459.09} />
                 </div>
             </div>
         </section>

@@ -9,7 +9,7 @@ const Information = () => {
             {/* Information */}
             <div>
                 <div className="mb-8 flex items-center justify-center">
-                    <Image src="/favicon.ico" alt="mahdibagheri" width={144} height={144} />
+                    <Image src="/personal.png" alt="mahdibagheri" width={144} height={144}  className="ml-8 rounded-full"/>
                 </div>
                 <div className="text-center mb-4">
                     <h2 className="text-lg mb-4">Mahdi Bagheri</h2>

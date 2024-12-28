@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "bagheri-dev",
-  description: "Portfolio",
+  title: "bagheri-dev | Front-End",
+  description: "Mahdi Bagheri Front-End Developer",
 };
 
 export default function RootLayout({

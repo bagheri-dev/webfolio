@@ -7,6 +7,7 @@ import { MdHomeRepairService } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
 import { RiContrast2Fill, RiHome3Fill, RiQuillPenAiFill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import { BsSunFill } from "react-icons/bs";
 
 const SideNavigation = () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -31,9 +32,8 @@ const SideNavigation = () => {
 
     return (
         <motion.div
-            className={`fixed right-0 top-0 w-[108px] h-screen ${
-                darkMode ? "bg-gray-800 text-black" : "bg-white text-black"
-            }`}
+            className={`fixed right-0 top-0 w-[108px] h-screen ${darkMode ? "bg-gray-800 text-black" : "bg-white text-black"
+                }`}
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
@@ -43,10 +43,20 @@ const SideNavigation = () => {
                 <motion.div
                     className="mb-28 pt-10 cursor-pointer"
                     onClick={toggleTheme}
-                    whileHover={{ scale: 1.2, rotate: 360 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    whileHover={{
+                        scale: 1.1,
+                    }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 10,
+                    }}
                 >
-                    <RiContrast2Fill className="size-8" />
+                    {darkMode ? (
+                        <BsSunFill className="size-8 text-yellow-500" />
+                    ) : (
+                        <RiContrast2Fill className="size-8 text-gray-700" />
+                    )}
                 </motion.div>
 
                 {/* Navigation Links */}
