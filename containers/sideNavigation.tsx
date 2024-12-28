@@ -24,9 +24,9 @@ const SideNavigation = () => {
     const navLinks = [
         { Icon: RiHome3Fill, href: "#home" },
         { Icon: GrServices, href: "#services" },
+        { Icon: RiQuillPenAiFill, href: "#projects" },
         { Icon: PiStudentFill, href: "#courses" },
         { Icon: MdHomeRepairService, href: "#work-history" },
-        { Icon: RiQuillPenAiFill, href: "#projects" },
         { Icon: FaComment, href: "#contact" },
     ];
 

@@ -32,7 +32,7 @@ const courses = [
 ];
 const CoursesSection = () => {
     return (
-        <section id="courses" className="my-20 px-8">
+        <section id="courses" className="py-10">
             <h2 className="text-center text-5xl font-bold mb-6 text-gray-900 dark:text-white">My Courses</h2>
             <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12">
                 Over the years, I've taken numerous courses that have shaped my skills

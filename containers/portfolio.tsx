@@ -34,7 +34,7 @@ const projects = [
 
 const Portfolio = () => {
     return (
-        <section id="projects" className="my-20 px-6 lg:px-16">
+        <section id="projects" className="py-10">
             <h2 className="text-center text-5xl font-bold mb-6 text-gray-900 dark:text-white">
                 My Portfolio
             </h2>

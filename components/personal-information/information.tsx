@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SocialMedia from "../socialMedia";
 import { Progress } from "@/components/ui/progress";
-import CVBtn from "../cvBtn";
 
 const Information = () => {
     return (
@@ -86,10 +85,6 @@ const Information = () => {
             <div className="flex items-center justify-between pt-6">
                 <h3 className="font-bold dark:text-gray-200">Languages:</h3>
                 <span className="dark:text-gray-300">Intermediate</span>
-            </div>
-            {/* Download CV */}
-            <div className="pt-6">
-                <CVBtn />
             </div>
         </div>
     );

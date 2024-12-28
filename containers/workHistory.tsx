@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const WorkHistory = () => {
     return (
-        <section id="work-history" className="my-20 px-8">
+        <section id="work-history" className="py-10">
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
