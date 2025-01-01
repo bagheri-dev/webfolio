@@ -1,371 +1,126 @@
+"use client";
+import { motion } from "framer-motion";
+
+const skillsData = [
+    {
+        title: "Next.js",
+        items: [
+            "App router",
+            "Component hierarchy and file conventions",
+            "Rendering strategies (SSR, ISR, CSR, SSG)",
+            "Caching, Performance, and Optimization",
+            "API routes, server actions and mutation",
+            "Server components and Suspense",
+        ],
+    },
+    {
+        title: "React & Libraries",
+        items: [
+            "JSX and functional components",
+            "Components architecture",
+            "Atomic design pattern",
+            "Lifecycle and reconciles",
+            "React design patterns",
+            "Hooks pattern",
+            "State management by context, reducer and redux, zustand",
+            "Redux toolkit",
+            "React router",
+            "React hook form and zod resolver",
+            "Tanstack react query",
+            "React component libraries like Material UI and Headless UI",
+            "JSS, styled-components, CSS modules",
+            "React vite",
+        ],
+    },
+    {
+        title: "TypeScript & JavaScript",
+        items: [
+            "Classes, interfaces, generics, inheritance and polymorphism",
+            "Functional programming paradigm",
+            "Strongly typed programming",
+            "DOM and DOM manipulation",
+            "Async functions within promises and callbacks",
+            "Vite JS SPA",
+            "Client side rendering",
+            "Exception handling",
+            "Axios and fetching APIs",
+            "Events, forms and dates",
+        ],
+    },
+    {
+        title: "Network",
+        items: [
+            "Authorizations strategies like JWT and cookies",
+            "REST API & Json",
+            "Axios and fetch APIs",
+        ],
+    },
+    {
+        title: "HTML & CSS",
+        items: [
+            "HTML5 and CSS3",
+            "Tailwind",
+            "RWD (Responsive Web Design)",
+            "Media Queries",
+            "Flex and grid systems",
+            "Animations",
+            "Semantic tags",
+        ],
+    },
+    {
+        title: "Tools",
+        items: [
+            "Node.js",
+            "Node packages managers",
+            "Git, Gitflow",
+            "Figma",
+            "Trello",
+        ],
+    },
+];
+
 const SkilTabs = () => {
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50, scale: 0.9 },
+        visible: { opacity: 1, y: 0, scale: 1 },
+    };
+
+    const hoverVariants = {
+        hover: { scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" },
+        initial: { scale: 1, boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" },
+    };
+
     return (
-        <div role="tablist" className="tabs tabs-lifted">
-            {/* Tab 1 */}
-            <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab text-primary-color text-lg font-semibold bg-gray-normal hover:bg-primary-color hover:text-white transition-all duration-300"
-                aria-label="NextJS"
-            />
-            <div
-                role="tabpanel"
-                className="tab-content bg-gray-normal dark:bg-zinc-700 border border-secondary-color rounded-lg p-6 shadow-lg"
-            >
-                <div className="text-primary-color dark:text-gray-normal px-4">
-                    <ul className="timeline timeline-vertical">
-                        <li>
-                            <div className="timeline-start timeline-box">App router</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box"> Component hierarchy and file conventions</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Rendering strategies (SSR, ISR, CSR, SSG)</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Caching, Performance, and Optimization
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">API routes, server actions and mutation
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Component hierarchy and file conventions
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Server components and Suspense
-                            </div>
-                            <hr />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            {/* Tab 2 */}
-            <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab text-primary-color text-lg font-semibold bg-gray-normal hover:bg-primary-color hover:text-white transition-all duration-300"
-                aria-label="React & Libraries"
-                defaultChecked
-            />
-            <div
-                role="tabpanel"
-                className="tab-content bg-gray-normal dark:bg-zinc-700 border border-secondary-color rounded-lg p-6 shadow-lg"
-            >
-                <div className="text-primary-color dark:text-gray-normal">
-                    <ul className="timeline timeline-vertical">
-                        <li>
-                            <div className="timeline-end timeline-box">JSX and functional components
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box"> Components architecture
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Atomic design pattern
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Lifecycle and reconciles
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">React design patterns
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Hooks pettern
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">State management by context, reducer and redux , zustand
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Redux toolkit
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">React router
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">React hook form and zod resolver
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Tanstack react query
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">React component libraries like Material UI and Headless UI
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">JSS, styled-components, CSS modules
-
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">React vite
-                            </div>
-                            <hr />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            {/* Tab 3 */}
-            <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab text-primary-color text-lg font-semibold bg-gray-normal hover:bg-primary-color hover:text-white transition-all duration-300"
-                aria-label="TypeScript & JavaScript"
-            />
-            <div
-                role="tabpanel"
-                className="tab-content bg-gray-normal dark:bg-zinc-700 border border-secondary-color rounded-lg p-6 shadow-lg"
-            >
-                <div className="text-primary-color dark:text-gray-normal">
-                    <ul className="timeline timeline-vertical">
-                        <li>
-                            <div className="timeline-start timeline-box">Classes, interfaces, generics, inheritance and polymorphism</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Functional programming paradigm</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Strongly typed programming</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">DOM and DOM manipulation
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box"> Async functions within promises and callbacks
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Vite JS SPA
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Client side rendering
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Exception handling
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Axios and fetching APIs
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Events, forms and dates
-                            </div>
-                            <hr />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            {/* Tab 4 */}
-            <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab text-primary-color text-lg font-semibold bg-gray-normal hover:bg-primary-color hover:text-white transition-all duration-300"
-                aria-label="Network"
-            />
-            <div
-                role="tabpanel"
-                className="tab-content bg-gray-normal dark:bg-zinc-700 border border-secondary-color rounded-lg p-6 shadow-lg"
-            >
-                <div className="text-primary-color dark:text-gray-normal">
-                    <ul className="timeline timeline-vertical">
-                        <li>
-                            <div className="timeline-start timeline-box">Authorizations strategies like JWT and cookies</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">REST API & Json</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Axios and fetch APIs</div>
-                            <hr />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            {/* Tab 5 */}
-            <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab text-primary-color text-lg font-semibold bg-gray-normal hover:bg-primary-color hover:text-white transition-all duration-300"
-                aria-label="HTML & CSS"
-            />
-            <div
-                role="tabpanel"
-                className="tab-content bg-gray-normal dark:bg-zinc-700 border border-secondary-color rounded-lg p-6 shadow-lg"
-            >
-                <div className="text-primary-color dark:text-gray-normal">
-                    <ul className="timeline timeline-vertical">
-                        <li>
-                            <div className="timeline-end timeline-box">HTML5 and CSS3</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Tailwind</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">RWD (Responsive Web Design)</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Media Queries</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box"> Flex and grid systems</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Animations</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Semantic tags</div>
-                            <hr />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            {/* Tab 6 */}
-            <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab text-primary-color text-lg font-semibold bg-gray-normal hover:bg-primary-color hover:text-white transition-all duration-300"
-                aria-label="Tools"
-            />
-            <div
-                role="tabpanel"
-                className="tab-content bg-gray-normal dark:bg-zinc-700 border border-secondary-color rounded-lg p-6 shadow-lg"
-            >
-                <div className="text-primary-color dark:text-gray-normal">
-                <ul className="timeline timeline-vertical">
-                        <li>
-                            <div className="timeline-end timeline-box">Node.js</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Node packages managers</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Git, Gitflow</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">Figma</div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-end timeline-box">Trello</div>
-                            <hr />
-                        </li>
-                    </ul>
-                </div>
+        <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {skillsData.map((skill, index) => (
+                    <motion.div
+                        key={index}
+                        variants={cardVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+                        whileHover="hover"
+                        // eslint-disable-next-line react/jsx-no-duplicate-props
+                        variants={hoverVariants}
+                        className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform"
+                    >
+                        <h3 className="text-xl font-semibold mb-4 text-primary-color dark:text-white">
+                            {skill.title}
+                        </h3>
+                        <ul className="space-y-2">
+                            {skill.items.map((item, i) => (
+                                <li
+                                    key={i}
+                                    className="text-gray-700 dark:text-gray-300 text-sm"
+                                >
+                                    • {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                ))}
             </div>
         </div>
     );

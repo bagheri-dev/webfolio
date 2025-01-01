@@ -20,22 +20,42 @@ const PortfolioCard = ({
     demoLink,
     techStack,
 }: IPortfolioCard) => {
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50, scale: 0.9 },
+        visible: { opacity: 1, y: 0, scale: 1 },
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const hoverVariants = {
+        hover: { scale: 1.02, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)" },
+    };
+
+    const imageHoverVariants = {
+        hover: { scale: 1.1 },
+    };
+
     return (
         <motion.div
             key={id}
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col"
+            whileHover="hover"
+            className="relative group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col"
         >
-            <div className="overflow-hidden">
+            <motion.div
+                className="overflow-hidden"
+                whileHover={imageHoverVariants.hover}
+                transition={{ duration: 0.3 }}
+            >
                 <motion.img
                     src={image}
                     alt={title}
-                    className="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-52 object-cover transition-transform duration-300"
                 />
-            </div>
+            </motion.div>
 
             <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-primary-color mb-2">
@@ -47,32 +67,38 @@ const PortfolioCard = ({
 
                 <div className="flex flex-wrap gap-2 mb-4">
                     {techStack.map((tech, index) => (
-                        <span
+                        <motion.span
                             key={index}
-                            className="text-xs bg-gray-normal text-gray-700 px-2 py-1 rounded dark:bg-gray-700 dark:text-gray-300"
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="text-xs bg-gray-normal text-gray-700 px-2 py-1 rounded dark:bg-gray-700 dark:text-gray-300 cursor-pointer"
                         >
                             {tech}
-                        </span>
+                        </motion.span>
                     ))}
                 </div>
 
                 <div className="flex justify-between items-center mt-auto">
-                    <a
+                    <motion.a
                         href={demoLink}
                         target="_blank"
                         rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 300 }}
                         className="text-secondary-color hover:text-orange-dark text-sm font-medium transition-colors"
                     >
                         View Demo
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                         href={codeLink}
                         target="_blank"
                         rel="noopener noreferrer"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 300 }}
                         className="text-secondary-color hover:text-orange-dark text-sm font-medium transition-colors"
                     >
                         View Code
-                    </a>
+                    </motion.a>
                 </div>
             </div>
         </motion.div>
