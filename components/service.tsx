@@ -9,7 +9,6 @@ type IService = {
 };
 
 const Service = ({ title, desc, image }: IService) => {
-    // انیمیشن‌ها
     const cardVariants = {
         hidden: { opacity: 0, y: 50, scale: 0.9 },
         visible: { opacity: 1, y: 0, scale: 1 },
@@ -20,19 +19,17 @@ const Service = ({ title, desc, image }: IService) => {
         visible: { scale: 1, opacity: 1 },
     };
 
-    const hoverVariants = {
-        hover: { scale: 1.05, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)" },
-    };
-
     return (
         <motion.div
-            variants={cardVariants}
+            variants={{
+                ...cardVariants,
+                hover: { scale: 1.05, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)" },
+            }}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             whileHover="hover"
-            variants={hoverVariants}
             className="bg-white dark:bg-gray-800 py-[76px] pt-7 pb-10 px-8 shadow-md rounded-lg hover:shadow-lg transition-all duration-300"
         >
             <motion.div

@@ -33,6 +33,7 @@ const CourseCard = ({ id, name, title, description, date, link, image }: ICourse
 
     return (
         <motion.div
+            key={id}
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
