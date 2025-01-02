@@ -83,11 +83,7 @@ const SkilTabs = () => {
     const cardVariants = {
         hidden: { opacity: 0, y: 50, scale: 0.9 },
         visible: { opacity: 1, y: 0, scale: 1 },
-    };
-
-    const hoverVariants = {
         hover: { scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" },
-        initial: { scale: 1, boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" },
     };
 
     return (
@@ -102,8 +98,6 @@ const SkilTabs = () => {
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                         whileHover="hover"
-                        // eslint-disable-next-line react/jsx-no-duplicate-props
-                        variants={hoverVariants}
                         className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform"
                     >
                         <h3 className="text-xl font-semibold mb-4 text-primary-color dark:text-white">
