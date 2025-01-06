@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import PersonalInformation from "@/containers/personalInformation";
-import SideNavigation from "@/containers/sideNavigation";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// import PersonalInformation from "@/containers/personalInformation";
+// import SideNavigation from "@/containers/sideNavigation";
 
 export const metadata: Metadata = {
   title: "bagheri-dev | Front-End",
@@ -27,12 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#E5E5E5] dark:bg-zinc-700`}
+        className={`font-IRANYekanWeb antialiased bg-[#E5E5E5] dark:bg-zinc-700`}
       >
-        <div className="flex">
-          <PersonalInformation />
+        <div>
+          {/* <PersonalInformation /> */}
           {children}
-          <SideNavigation />
+          {/* <SideNavigation /> */}
         </div>
       </body>
     </html>

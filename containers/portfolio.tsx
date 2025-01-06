@@ -1,5 +1,11 @@
-"use client"
+"use client";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 import PortfolioCard from "@/components/portfolioCard";
 
 const projects = [
@@ -28,8 +34,8 @@ const projects = [
         image: "/nexcent-desktop.png",
         demoLink: "https://bagheri-dev.github.io/Nexcent/",
         codeLink: "https://github.com/bagheri-dev/Nexcent",
-        techStack: ["Tailwind CSS" , "React.js" , "vite"],
-    }, 
+        techStack: ["Tailwind CSS", "React.js", "vite"],
+    },
     {
         id: 4,
         title: "golden coffee shop",
@@ -37,24 +43,64 @@ const projects = [
         image: "/golden-coffee-shop.png",
         demoLink: "https://golden-coffee-shop.vercel.app/",
         codeLink: "https://github.com/bagheri-dev/golden-coffee-shop",
-        techStack: ["Next JS" , "Tailwind CSS" , "Axios" , "react-hook-form" , "zod" , "zustand"],
-    }, 
+        techStack: ["Next JS", "Tailwind CSS", "Axios", "react-hook-form", "zod", "zustand"],
+    },
 ];
 
 const Portfolio = () => {
     return (
-        <section id="projects" className="py-10">
-            <h2 className="text-center text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-                My Portfolio
-            </h2>
-            <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12">
-            A showcase of my journey as a front-end developer. Each project reflects my commitment to innovation, creativity, and technical excellence. For a deeper dive into my full portfolio and more projects, feel free to explore my GitHub.
-            </p>
+        <section id="projects" className="mt-10 lg:mt-24 py-4 lg:py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-lg">
+            <div className="container mx-auto px-4">
+                <h2 className="text-center text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+                    My Portfolio
+                </h2>
+                <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+                    A showcase of my journey as a front-end developer. Each project reflects my commitment to innovation, creativity, and technical excellence. For a deeper dive into my full portfolio and more projects, feel free to explore my GitHub.
+                </p>
 
-            <div className="grid grid-cols-3 gap-10">
-                {projects.map((project) => (
-                    <PortfolioCard key={project.id} id={project.id} title={project.title}  description={project.description}  image={project.image}  codeLink={project.codeLink}  demoLink={project.demoLink} techStack={project.techStack} />
-                ))}
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+                    spaceBetween={30}
+                    slidesPerView={3}
+                    navigation
+                    pagination={{ clickable: true }}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    loop={true}
+                    effect="coverflow"
+                    coverflowEffect={{
+                        rotate: 20,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 2,
+                        slideShadows: true,
+                    }}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                    }}
+                    className="swiper-container"
+                >
+                    {projects.map((project) => (
+                        <SwiperSlide key={project.id} className="swiper-slide">
+                            <PortfolioCard
+                                id={project.id}
+                                title={project.title}
+                                description={project.description}
+                                image={project.image}
+                                codeLink={project.codeLink}
+                                demoLink={project.demoLink}
+                                techStack={project.techStack}
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </section>
     );

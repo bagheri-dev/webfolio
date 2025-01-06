@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const WorkHistory = () => {
     return (
-        <section id="work-history" className="py-10">
+        <section id="work-history" className="mt-10 lg:mt-24 px-4 sm:px-6 lg:px-8">
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="text-center text-5xl font-bold mb-6 text-gray-900 dark:text-white"
+                className="text-center text-xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white"
             >
                 Work History
             </motion.h2>
