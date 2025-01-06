@@ -68,7 +68,7 @@ const Header = () => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 200 }}
-                        onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                        onClick={() => setIsMenuOpen(false)}
                     >
                         <div
                             className={`p-3 rounded-full ${darkMode ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-100 hover:bg-gray-200"

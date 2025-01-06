@@ -1,7 +1,7 @@
 "use client";
 import { FaGithubSquare, FaLinkedin, FaTelegram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { motion } from "framer-motion"; // برای انیمیشن‌های بیشتر
+import { motion } from "framer-motion";
 
 const Contact = () => {
     return (

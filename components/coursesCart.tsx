@@ -20,7 +20,6 @@ const CourseCard = ({ id, name, title, description, date, link, image }: ICourse
         setIsExpanded(!isExpanded);
     };
 
-    // انیمیشن‌ها
     const cardVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },

@@ -1,4 +1,4 @@
-"use client"; // برای استفاده از useEffect و useState
+"use client";
 
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
@@ -6,37 +6,32 @@ import HireMe from "@/components/hireMe";
 import Image from "next/image";
 
 const HeroSection = () => {
-    // ایجاد ref برای عناصر متن
-    const typedTextRef1 = useRef(null); // برای "I’m Mahdi Bagheri"
-    const typedTextRef2 = useRef(null); // برای "Front-end Developer"
+    const typedTextRef1 = useRef(null);
+    const typedTextRef2 = useRef(null);
 
     useEffect(() => {
-        // تنظیمات Typed.js برای "I’m Mahdi Bagheri"
         const options1 = {
             strings: ["I’m Mahdi Bagheri"],
-            typeSpeed: 50, // سرعت تایپ
-            backSpeed: 30, // سرعت پاک کردن
-            startDelay: 500, // تاخیر قبل از شروع
-            showCursor: true, // نمایش مکان‌نما
-            cursorChar: "|", // شکل مکان‌نما
-            loop: true, // اجرای لوپ
+            typeSpeed: 50,
+            backSpeed: 30,
+            startDelay: 500,
+            showCursor: true,
+            cursorChar: "|",
+            loop: true,
         };
 
-        // تنظیمات Typed.js برای "Front-end Developer"
         const options2 = {
             strings: ["Front-end Developer"],
-            typeSpeed: 50, // سرعت تایپ
-            backSpeed: 30, // سرعت پاک کردن
-            startDelay: 2000, // تاخیر قبل از شروع (بعد از اتمام انیمیشن اول)
-            showCursor: false, // عدم نمایش مکان‌نما
-            loop: true, // اجرای لوپ
+            typeSpeed: 50,
+            backSpeed: 30,
+            startDelay: 2000,
+            showCursor: false,
+            loop: true,
         };
 
-        // مقداردهی Typed.js برای هر دو متن
         const typed1 = new Typed(typedTextRef1.current, options1);
         const typed2 = new Typed(typedTextRef2.current, options2);
 
-        // پاک کردن Typed.js هنگام unmount
         return () => {
             typed1.destroy();
             typed2.destroy();
@@ -46,10 +41,8 @@ const HeroSection = () => {
     return (
         <section id="home" className="bg-white dark:bg-gray-800 rounded-lg mt-5 w-[75%]">
             <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-14 py-10">
-                {/* متن و توضیحات */}
                 <div className="order-2 md:order-1 text-center md:text-left">
                     <h1 className="text-3xl md:text-5xl font-bold mb-5 text-black dark:text-white">
-                        {/* ارتفاع ثابت برای "I’m Mahdi Bagheri" */}
                         <div style={{ height: "60px", whiteSpace: "nowrap" }}>
                             <span ref={typedTextRef1}></span>
                         </div>
@@ -65,7 +58,6 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                {/* تصویر */}
                 <div className="order-1 md:order-2 mb-8 md:mb-0">
                     <Image
                         src={"/icons-about-programmers-work-with-part-code-programmer-looking-bugs_Nero AI_background_remover_edit.png"}

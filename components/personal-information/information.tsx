@@ -2,6 +2,7 @@
 import Image from "next/image";
 import SocialMedia from "../socialMedia";
 import { motion } from "framer-motion";
+import CVBtn from "../cvBtn";
 
 const Information = () => {
     return (
@@ -56,6 +57,9 @@ const Information = () => {
                     <span className="dark:text-gray-300">Iran-Tehran</span>
                 </div>
             </motion.div>
+            <div className="py-2">
+                <CVBtn />
+            </div>
         </motion.div>
     );
 };
