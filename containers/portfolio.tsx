@@ -35,7 +35,7 @@ const projects = [
         title: "golden coffee shop",
         description: "Welcome to Golden Coffee Shop, an elegant and fully responsive online platform for selling coffee! Built with Next.js, this project combines performance, scalability, and modern design to deliver an exceptional user experience for coffee lovers worldwide.",
         image: "/golden-coffee-shop.png",
-        demoLink: "https://golden-coffee-shop-ql3m3y5te-mahdis-projects-864a6f70.vercel.app/",
+        demoLink: "https://golden-coffee-shop.vercel.app/",
         codeLink: "https://github.com/bagheri-dev/golden-coffee-shop",
         techStack: ["Next JS" , "Tailwind CSS" , "Axios" , "react-hook-form" , "zod" , "zustand"],
     }, 
